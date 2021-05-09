@@ -1,0 +1,103 @@
+$header1: 2.2rem;
+$header2: 2.4rem;
+$header3: 2.6rem;
+$header4: 1.8rem;
+$text: 1.5rem;
+$titles: 1.8rem;
+$see-more: 1.6rem;
+$footer: 2.2rem;
+$background-color: rgba(17, 45, 50, 1);
+$background-color-mobile: rgb(23, 61, 68);
+$header1-color: rgba(136, 189, 188, 0.8);
+$header3-color: rgba(247, 158, 2, 1);
+$text-color: rgba(58, 175, 169, 1);
+$background-card-top: rgba(32, 99, 96, 1);
+$background-card-bottom: rgba(33, 32, 32, 1);
+
+@mixin flex($justify, $aling, $direction) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $aling;
+  flex-direction: $direction;
+}
+
+@import "global";
+@import "header";
+@import "presentation";
+@import "about";
+@import "portfolio";
+@import "skills";
+@import "contact";
+@import "footer";
+
+@media screen and (max-width: 915px) {
+  html {
+    font-size: 58%;
+  }
+  .links-wrapper {
+    display: none !important;
+  }
+  /* -----------BURGER------------ */
+  .burger {
+    position: relative;
+    display: block;
+    cursor: pointer;
+    z-index: 1000;
+  }
+  .burger span {
+    padding: 0.2rem 1.8rem;
+    background: $header3-color;
+    margin: 0.5rem 0rem;
+    display: block;
+    transition: all 0.8s ease;
+    z-index: 1000;
+  }
+  /* Animation burger */
+  .toggle .line1 {
+    transform: rotateZ(45deg) translateY(300%);
+    background: $header3-color;
+  }
+  .toggle .line2 {
+    opacity: 0;
+  }
+  .toggle .line3 {
+    transform: rotateZ(-45deg) translateY(-300%);
+    background: $header3-color;
+  }
+  .hide {
+    overflow: hidden;
+  }
+
+  /* ---NAV-SIDEBAR ANIMATIONS--- */
+}
+
+@media screen and (max-width: 685px) {
+  .portfolio-center {
+    .card {
+      width: 28rem;
+      margin: auto;
+      .bottom {
+        .link-proyect a {
+          font-size: 1.7rem;
+          color: $header3-color;
+          margin-left: 3rem;
+        }
+      }
+    }
+  }
+  .background-portfolio {
+    width: 35rem;
+    top: 210vh;
+    right: 0;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  html {
+    font-size: 54%;
+  }
+
+  .wrapper-about {
+    height: 70vh;
+  }
+}

@@ -1,0 +1,31 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  font-family: "Roboto Mono", monospace;
+  background-color: $background-color;
+}
+
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+
+.background-presentation {
+  position: absolute;
+  top: 60vh;
+  z-index: -100;
+}
+.background-portfolio {
+  position: absolute;
+  top: 120vh;
+  right: 0;
+  z-index: -100;
+}

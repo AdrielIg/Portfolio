@@ -1,0 +1,29 @@
+.wrapper-about {
+  height: 50vh;
+  width: 80%;
+  margin: auto;
+  text-align: center;
+
+  .about-me-title {
+    font-size: $header3;
+    color: $header3-color;
+    text-transform: uppercase;
+    margin: 5rem;
+    font-weight: 700;
+  }
+
+  .description {
+    font-size: $text;
+    color: $text-color;
+    font-weight: 300;
+
+    .developer {
+      font-weight: 700;
+    }
+
+    .years,
+    .origen {
+      font-weight: 500;
+    }
+  }
+}

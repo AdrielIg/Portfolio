@@ -1,0 +1,47 @@
+.skills {
+  width: 80%;
+  margin: auto;
+  margin-top: 10rem;
+
+  .skills-title {
+    font-size: $header3;
+    color: $header3-color;
+    text-transform: uppercase;
+    margin: 5rem;
+    font-weight: 700;
+    text-align: center;
+  }
+  .skills-wrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+
+    .design-title,
+    .frontend-title {
+      font-size: $header4;
+      color: $header3-color;
+      text-transform: capitalize;
+      margin: 0.5rem;
+      font-weight: 700;
+    }
+
+    .title-wrapper {
+      position: relative;
+      .divisor {
+        height: 0.1rem;
+        width: 5rem;
+        background-color: white;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%);
+      }
+    }
+
+    .skill-list {
+      margin: 3rem;
+      font-size: $text;
+      color: $text-color;
+    }
+  }
+}

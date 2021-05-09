@@ -1,0 +1,81 @@
+.wrapper-portfolio {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  min-height: 60vh;
+
+  .portfolio-title {
+    font-size: $header3;
+    color: $header3-color;
+    text-transform: uppercase;
+    margin: 5rem;
+    font-weight: 700;
+    text-align: center;
+  }
+
+  .portfolio-center {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
+
+    gap: 6rem 3rem;
+    .card {
+      box-shadow: 20px 26px 38px -12px rgba(0, 0, 0, 0.3),
+        10px 25px 38px -6px rgba(0, 0, 0, 0.3);
+      border-radius: 10px;
+
+      &:hover {
+        z-index: 400;
+        box-shadow: 20px 26px 38px -12px rgba(0, 0, 0, 0.5),
+          10px 25px 38px -6px rgba(0, 0, 0, 0.5);
+        transform: scale(1.05);
+      }
+    }
+
+    .top {
+      background-color: $background-card-top;
+      height: 20rem;
+      position: relative;
+      border-radius: 10px 10px 0 0;
+
+      img {
+        width: 25rem;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        pointer-events: none;
+      }
+    }
+    .bottom {
+      background-color: $background-card-bottom;
+      height: 7rem;
+      border-radius: 0 0 10px 10px;
+      text-align: left;
+
+      .proyect-title {
+        color: $text-color;
+        font-size: $text;
+        font-weight: 600;
+        padding: 1rem 0;
+        margin-left: 3rem;
+      }
+
+      .link-proyect a {
+        font-size: 1.2rem;
+        color: black;
+        margin-left: 3rem;
+        text-transform: uppercase;
+        font-weight: 700;
+        background-color: $header3-color;
+        padding: 0.5rem 1rem;
+        border-radius: 6px;
+      }
+      .link-proyect a:hover {
+        transform: scale(1.02);
+        box-shadow: 5px 2px 4px -6px rgba(0, 0, 0, 0.5),
+          4px 5px 6px -3px rgba(0, 0, 0, 0.5);
+      }
+    }
+  }
+}

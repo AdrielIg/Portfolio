@@ -1,0 +1,45 @@
+.contact {
+  min-height: 25vh;
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  padding: 8rem 0;
+  position: relative;
+
+  .contact-me {
+    font-size: $header3;
+    color: $header3-color;
+    text-transform: capitalize;
+    margin: 2rem 0 4rem 0;
+    font-weight: 700;
+    text-align: center;
+
+    .contact-span {
+      color: $header1-color;
+    }
+  }
+
+  .copyText {
+    display: inline-block;
+    background: transparent;
+    box-shadow: none;
+    border: none;
+    outline: none;
+    color: $text-color;
+    cursor: pointer;
+    text-align: center;
+    width: 27rem;
+    box-sizing: content-box;
+    font-family: "Roboto Mono", monospace;
+  }
+
+  .divisor-end {
+    height: 0.1rem;
+    width: 10rem;
+    background: white;
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translate(-50%);
+  }
+}

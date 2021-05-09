@@ -1,0 +1,119 @@
+nav {
+  @include flex(space-between, center, row);
+  min-height: 5vh;
+  width: 80%;
+  margin: 2rem auto;
+
+  /* -------LOGO-------- */
+  h1 {
+    font-size: $header1;
+    color: $header1-color;
+
+    flex: 3 1 20rem;
+
+    .span-logo {
+      color: $header3-color;
+    }
+  }
+  /* ------NAV-BAR------- */
+  .links-wrapper {
+    @include flex(space-between, center, row);
+
+    flex: 1 1 20rem;
+
+    .nav-links {
+      @include flex(space-between, center, row);
+
+      .nav-link {
+        margin: 0rem 3rem;
+        font-size: $text;
+        text-transform: uppercase;
+
+        font-weight: 300;
+        cursor: pointer;
+
+        a {
+          text-decoration: none;
+          color: $text-color;
+        }
+
+        &:hover {
+          transform: scale(1.1);
+          font-weight: 600;
+        }
+      }
+    }
+    img {
+      cursor: pointer;
+      pointer-events: none;
+    }
+  }
+
+  /* --------- SIDE-BAR-MOBILE-------- */
+
+  .nav-mobile {
+    @include flex(flex-start, center, column);
+    position: fixed;
+    height: 100%;
+    width: 60%;
+    background: white;
+    top: 0;
+    right: 0;
+    transform: translateX(110%);
+    z-index: 800;
+    transition: 0.5s ease;
+    box-shadow: -4px 0px 10px 0px rgba(0, 0, 0, 0.5),
+      -2px 0px 20px 6px rgba(0, 0, 0, 0.5);
+
+    h2 {
+      font-size: $header1;
+      color: $header1-color;
+      margin-top: 10rem;
+
+      .span-logo {
+        color: $header3-color;
+      }
+    }
+    .nav-links-mobile {
+      margin: 0rem 3rem;
+      font-size: $text;
+      text-transform: uppercase;
+      color: $text-color;
+      font-weight: 300;
+
+      text-align: center;
+      .nav-link-mobile {
+        text-decoration: none;
+        color: $text-color;
+        cursor: pointer;
+        margin: 5rem;
+        a {
+          text-decoration: none;
+          color: $text-color;
+          font-size: $header4;
+        }
+      }
+    }
+
+    .made-by-mobile-wrapper {
+      margin-top: 14rem;
+      padding-top: 1rem;
+      position: relative;
+
+      .separador-mobile {
+        height: 0.1rem;
+        background-color: black;
+        width: 30%;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%);
+      }
+      .made-by-mobile {
+        font-size: $text;
+        color: $header3-color;
+        font-weight: 300;
+      }
+    }
+  }
+}
